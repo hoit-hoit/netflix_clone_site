@@ -1,0 +1,43 @@
+.faq{
+  @include component_size;
+  h2{
+    @include responsive($breakpoint-small){
+      font-size: $font-size-medium;
+      margin: 20px  0;
+    }
+  }
+}
+.faq-list{
+  li{
+    margin: 5px;
+    button{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      text-align: left;
+      padding: 10px;
+      font-size: $font-size-medium;
+      position: relative;      
+      span{
+        word-break:keep-all ;
+      }
+    }    
+    p{
+      font-size: $font-size-medium;   
+      height: 0;     
+      opacity: 0;   
+      transition: 0.3s; 
+    }
+    p.open{   
+      height: 150px;  
+      padding: 10px 0;       
+      opacity: 1;
+      transition: 0.3s; 
+      @include responsive($breakpoint-small){
+        font-size: $font-size-small;
+        height: auto;
+        word-break: keep-all;        
+      }
+    }
+  }
+}
