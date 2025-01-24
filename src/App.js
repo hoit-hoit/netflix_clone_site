@@ -13,7 +13,7 @@ const App = () => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path="/" element={
+        <Route path="/*" element={
     <div className="app">
       <Header />
       <Banner />
